@@ -1,5 +1,13 @@
 (function(){
+
 	const carousel = document.querySelector('.carousel');
+	const templateSlide = document.getElementById('template-carousel-slide').innerHTML;
+
+	Mustache.parse(templateSlide);
+
+	for (let i = 0; i < carouselData.length; i++) {
+		carousel.insertAdjacentHTML('beforeEnd', Mustache.render(templateSlide, carouselData[i]));
+	}
 
 	const flkty = new Flickity(carousel, {
 		cellAlign: 'left',
@@ -19,4 +27,5 @@
 		progress = Math.max(0, Math.min(1, progress));
 		progressBar.style.width = progress * 100 + '%';
 	})
+	
 })();
