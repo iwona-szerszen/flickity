@@ -17,6 +17,7 @@
 		</div>
 	</div>
 	<div class="progress-bar"></div>
+	<div id="map"></div>
 
 	<script id="template-carousel-slide" type="x-tmpl-mustache">
 		<div class="carousel-cell" style="background-image: url( {{ image }} )">
@@ -31,27 +32,32 @@
 			{
 				image: 'http://mpi.krakow.pl/pliki/253380/4.jpg',
 				title: 'Kosciuszko Mound',
-				description: '<p>Built on St Bronisława Hill (accessed from ul. św. Bronisławy and al. Waszyngtona streets) it was built in three years, and work began in 1820. It stands 34.1 m / 112 ft and contains soil from the battlefields of the Kościuszko Uprising (Racławice, Maciejowice, and Dubienka) and the US War of Independence. In the mid-19th-century the Austrians surrounded the mound with fortifications, thus making it a part of the parameter of the Fortress of Kraków.</p>'
+				description: '<p>Built on St Bronisława Hill (accessed from ul. św. Bronisławy and al. Waszyngtona streets) it was built in three years, and work began in 1820. It stands 34.1 m / 112 ft and contains soil from the battlefields of the Kościuszko Uprising (Racławice, Maciejowice, and Dubienka) and the US War of Independence. In the mid-19th-century the Austrians surrounded the mound with fortifications, thus making it a part of the parameter of the Fortress of Kraków.</p>',
+				coords: {lat: 50.055, lng: 19.893}
 			},
 			{
 				image: 'http://mpi.krakow.pl/pliki/253384/4.jpg',
 				title: 'Pilsudski Mound',
-				description: '<p>The largest of Kraków mounds, also known as the Independence Mound, it stands 35 m (120 ft) tall. It was made in the Lasek Wolski woods on top of Sowiniec Hill (358 m / 1175 ft asl). Its construction began in 1934 on the 20th anniversary of the Marching out of the First Cadre Company, and finished in 1937. It contains soil from battlefields of the First World War. After the Second World War, it was purposefully devastated by Communist authorities. Since 1980 the Committee for the Care of Piłsudski Mound has supervised its restoration.</p>'
+				description: '<p>The largest of Kraków mounds, also known as the Independence Mound, it stands 35 m (120 ft) tall. It was made in the Lasek Wolski woods on top of Sowiniec Hill (358 m / 1175 ft asl). Its construction began in 1934 on the 20th anniversary of the Marching out of the First Cadre Company, and finished in 1937. It contains soil from battlefields of the First World War. After the Second World War, it was purposefully devastated by Communist authorities. Since 1980 the Committee for the Care of Piłsudski Mound has supervised its restoration.</p>',
+				coords: {lat: 50.060, lng: 19.847}
 			},
 			{
 				image: 'http://mpi.krakow.pl/pliki/253382/4.jpg',
 				title: 'Krakus Mound',
-				description: '<p>Krakus Mound stands on Krzemionki plateau all (near Wielicka street). Built in the 7th century AD, it stands 16 m / 53 ft tall. Legend has it the tomb of the founder of the city – Prince Krakus or King Krak. Much like Wanda Mound, it was probably a pagan place of worship and/or watch.</p>'
+				description: '<p>Krakus Mound stands on Krzemionki plateau all (near Wielicka street). Built in the 7th century AD, it stands 16 m / 53 ft tall. Legend has it the tomb of the founder of the city – Prince Krakus or King Krak. Much like Wanda Mound, it was probably a pagan place of worship and/or watch.</p>',
+				coords: {lat: 50.038, lng: 19.958}
 			},
 			{
 				image: 'http://mpi.krakow.pl/pliki/253385/4.jpg',
 				title: 'Wanda Mound',
-				description: '<p>It stands close to the perimeter of the Tadeusz Sendzimir Steelworks (ArcelorMittal, in ul. Ujastek street) with the crown 14 m / 46 ft above its base. Built most probably in the 7th century, according to legend it is the grave of the mythical Wanda, daughter of King Krak. The eagle monument on its top was designed by Jan Matejko.</p>'
+				description: '<p>It stands close to the perimeter of the Tadeusz Sendzimir Steelworks (ArcelorMittal, in ul. Ujastek street) with the crown 14 m / 46 ft above its base. Built most probably in the 7th century, according to legend it is the grave of the mythical Wanda, daughter of King Krak. The eagle monument on its top was designed by Jan Matejko.</p>',
+				coords: {lat: 50.070, lng: 20.068}
 			},
 			{
 				image: 'http://mpi.krakow.pl/pliki/253383/4.jpg',
 				title: 'John Paul II Mound',
-				description: '<p>The youngest and smallest of Kraków’s mounds, it was raised in 1997 to the height of 7 m (24 ft). It stands in the Dębniki district on the premises of the Resurrectionist Congregation, where it commemorates the sixth pilgrimage of the Polish Pope to his homeland.</p>'
+				description: '<p>The youngest and smallest of Kraków’s mounds, it was raised in 1997 to the height of 7 m (24 ft). It stands in the Dębniki district on the premises of the Resurrectionist Congregation, where it commemorates the sixth pilgrimage of the Polish Pope to his homeland.</p>',
+				coords: {lat: 50.044, lng: 19.917}
 			}									
 		];
 	</script>
@@ -59,5 +65,9 @@
 	<script src="vendor/hash.js"></script>
 	<script src="vendor/mustache.min.js"></script>
 	<script src="js/script.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJUTPydGAimC-c88u_WQ1kCTegpHY52eM&callback=initMap"></script>
+	<!-- Script with my invalid(??) API key
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbmoBmWVFredfqO6O58P2xSs1HX0SvFGk&callback=initMap"></script>
+	-->
 </body>
 </html>
